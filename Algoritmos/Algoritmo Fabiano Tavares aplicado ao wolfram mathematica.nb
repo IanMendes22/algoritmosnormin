@@ -1,0 +1,173 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5358,        163]
+NotebookOptionsPosition[      4900,        148]
+NotebookOutlinePosition[      5310,        164]
+CellTagsIndexPosition[      5267,        161]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BaseRedu", "[", 
+   RowBox[{"{", 
+    RowBox[{"v10_", ",", "v20_"}], "}"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"v1", "=", "v10"}], ",", 
+      RowBox[{"v2", "=", "v20"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"v1", ".", "v1"}], ">", 
+        RowBox[{"v2", ".", "v2"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"v1", ",", "v2"}], "}"}], "=", 
+        RowBox[{"{", 
+         RowBox[{"v2", ",", "v1"}], "}"}]}]}], "]"}], ";", 
+     RowBox[{"t", "=", 
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{"v1", ".", "v2"}], "]"}], "/", 
+       RowBox[{"v1", ".", "v1"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{"t", ">", 
+        RowBox[{"1", "/", "2"}]}], ",", 
+       RowBox[{
+        RowBox[{"v2", "=", 
+         RowBox[{"v2", "-", 
+          RowBox[{
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"v1", ".", "v2"}], "/", 
+             RowBox[{"v1", ".", "v1"}]}], "]"}], " ", "v1"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"v1", ".", "v1"}], ">", 
+           RowBox[{"v2", ".", "v2"}]}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"v1", ",", "v2"}], "}"}], "=", 
+           RowBox[{"{", 
+            RowBox[{"v2", ",", "v1"}], "}"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"t", "=", 
+         RowBox[{
+          RowBox[{"Abs", "[", 
+           RowBox[{"v1", ".", "v2"}], "]"}], "/", 
+          RowBox[{"v1", ".", "v1"}]}]}], ";"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"v1", ",", "v2"}], "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8924049290190496`*^9, 3.8924049731033096`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"c6c7ec02-945e-44fe-9f90-b87e89efa335"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NormMin", "[", 
+   RowBox[{"{", 
+    RowBox[{"v10_", ",", "v20_"}], "}"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"v1", "=", "v10"}], ",", 
+      RowBox[{"v2", "=", "v20"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"v1", ".", "v1"}], ">", 
+        RowBox[{"v2", ".", "v2"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"v1", ",", "v2"}], "}"}], "=", 
+        RowBox[{"{", 
+         RowBox[{"v2", ",", "v1"}], "}"}]}]}], "]"}], ";", 
+     RowBox[{"t", "=", 
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{"v1", ".", "v2"}], "]"}], "/", 
+       RowBox[{"v1", ".", "v1"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{"t", ">", 
+        RowBox[{"1", "/", "2"}]}], ",", 
+       RowBox[{
+        RowBox[{"v2", "=", 
+         RowBox[{"v2", "-", 
+          RowBox[{
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"v1", ".", "v2"}], "/", 
+             RowBox[{"v1", ".", "v1"}]}], "]"}], " ", "v1"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"v1", ".", "v1"}], ">", 
+           RowBox[{"v2", ".", "v2"}]}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"v1", ",", "v2"}], "}"}], "=", 
+           RowBox[{"{", 
+            RowBox[{"v2", ",", "v1"}], "}"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"t", "=", 
+         RowBox[{
+          RowBox[{"Abs", "[", 
+           RowBox[{"v1", ".", "v2"}], "]"}], "/", 
+          RowBox[{"v1", ".", "v1"}]}]}], ";"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"v1", ".", "v1"}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.892295342776853*^9, 3.8922953868619504`*^9}, {
+  3.8922960459098787`*^9, 3.892296053369939*^9}, {3.8922960877084713`*^9, 
+  3.8922961562125287`*^9}, {3.8922961871926227`*^9, 3.892296191827816*^9}, {
+  3.8922963693337283`*^9, 3.892296375937132*^9}, {3.8922965723612814`*^9, 
+  3.8922965896451735`*^9}, {3.892412761202439*^9, 3.892412784016943*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"8c6e8b99-e6ee-4c5e-a549-1bf16930a75e"]
+},
+WindowSize->{756., 501.75},
+WindowMargins->{{Automatic, -161.25}, {Automatic, 30}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6a35b1c9-30a4-4b55-9e5b-3f6bb50b15c4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2014, 60, 205, "Input",ExpressionUUID->"c6c7ec02-945e-44fe-9f90-b87e89efa335"],
+Cell[2575, 82, 2321, 64, 220, "Input",ExpressionUUID->"8c6e8b99-e6ee-4c5e-a549-1bf16930a75e"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
