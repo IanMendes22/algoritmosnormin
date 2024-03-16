@@ -1,0 +1,231 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8465,        223]
+NotebookOptionsPosition[      7820,        206]
+NotebookOutlinePosition[      8231,        222]
+CellTagsIndexPosition[      8188,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Defini\[CCedilla]\[ATilde]o", " ", "da", " ", "matriz", " ", "B2", " ", 
+     "de", " ", "Lambda_", "2"}], ",", " ", 
+    RowBox[{
+    "em", " ", "que", " ", "d", " ", "\[EAcute]", " ", "o", " ", 
+     "par\[AHat]metro", " ", "do", " ", "reticulado"}], ",", " ", 
+    RowBox[{"e", " ", "m"}], ",", 
+    RowBox[{
+    "p", " ", "s\[ATilde]o", " ", "os", " ", "valores", " ", "da", " ", 
+     "matriz", " ", "de", " ", "tor\[CCedilla]\[ATilde]o"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"B2", "[", 
+    RowBox[{"d_", ",", "m_", ",", "p_"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "p"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SqrtBox["d"]}], ")"}], " ", "m"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"1", "-", 
+           SqrtBox["d"]}], 
+          RowBox[{"2", " "}]], ")"}], "p"}]}], "}"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.9195940189921017`*^9, 3.919594032079236*^9}, 
+   3.9195942482743006`*^9, {3.9195946821790714`*^9, 3.9195947010666184`*^9}, 
+   3.9195953184695597`*^9, 3.9195953572180405`*^9, {3.919595905283592*^9, 
+   3.9195959155706544`*^9}},
+ FontWeight->"Plain",
+ CellLabel->
+  "In[223]:=",ExpressionUUID->"44593392-148a-4b95-bee2-73fdab75d245"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Defini\[CCedilla]\[ATilde]o", " ", "da", " ", "fun\[CCedilla]\[ATilde]o", 
+    " ", "do", " ", "Volume", " ", "do", " ", "reticulado", " ", "Lambda_", 
+    "2"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"V2", "[", 
+    RowBox[{"d_", ",", "m_", ",", "p_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sqrt", "[", "d", "]"}], " ", "m", " ", "p"}]}]}]], "Input",
+ CellChangeTimes->{{3.9195937000856276`*^9, 3.9195937107502193`*^9}, {
+   3.919594686114684*^9, 3.9195947094825172`*^9}, 3.9195953662695155`*^9, {
+   3.919596158843051*^9, 3.919596159418696*^9}},
+ FontWeight->"Plain",
+ CellLabel->
+  "In[224]:=",ExpressionUUID->"1987576a-21b6-4c21-8967-b95a7797942d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Defini\[CCedilla]\[ATilde]o", " ", "da", " ", "fun\[CCedilla]\[ATilde]o", 
+    " ", "da", " ", "densidade", " ", "de", " ", "Lambda_", "2"}], "*)"}], 
+  "\n", 
+  RowBox[{
+   RowBox[{"Densi2", "[", 
+    RowBox[{"d_", ",", "m_", ",", "p_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"NorMin", "[", 
+         RowBox[{"B2", "[", 
+          RowBox[{"d", ",", "m", ",", "p"}], "]"}], "]"}], "^", "2"}], ")"}], 
+      " ", "\[Pi]"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"4", " ", 
+      RowBox[{"V2", "[", 
+       RowBox[{"d", ",", "m", ",", "p"}], "]"}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.919594690106264*^9, 3.9195946917622633`*^9}, {
+   3.919594751955763*^9, 3.91959475202672*^9}, 3.9195953671409826`*^9},
+ CellLabel->
+  "In[225]:=",ExpressionUUID->"8d58fadc-d25c-48d8-8e32-48d3ade20e3f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Fixar", " ", "o", " ", "valor", " ", "de", " ", "d"}], ",", " ", 
+    RowBox[{
+    "pelo", " ", "valor", " ", "escolhido", " ", "conforme", " ", "as", " ", 
+     "condi\[CCedilla]\[OTilde]es", " ", "do", " ", "reticulado"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"d", "=", "valor"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Gera\[CCedilla]\[ATilde]o", " ", "de", " ", "uma", " ", "lista", " ", 
+      "de", " ", "densidades", " ", "para", " ", "diferentes", " ", "valores",
+       " ", "de", " ", "m", " ", "e", " ", "p", " ", "variando", " ", "de", 
+      " ", "1", " ", "at\[EAcute]", " ", "1000"}], ",", " ", 
+     RowBox[{
+     "esse", " ", "intervalo", " ", "pode", " ", "ser", " ", "alterado", " ", 
+      "a", " ", "seu", " ", "crit\[EAcute]rio"}]}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"listaValores", "=", 
+     RowBox[{"ParallelTable", "[", 
+      RowBox[{
+       RowBox[{"N", "[", 
+        RowBox[{"Densi2", "[", 
+         RowBox[{"d", ",", "m", ",", "p"}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p", ",", "1", ",", "1000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"m", ",", "1", ",", "1000"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Extraindo", " ", "a", " ", "maior", " ", "densidade", " ", "da", " ", 
+     "lista", " ", "de", " ", "densidades"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"resultadoMaximo", "=", 
+     RowBox[{"Max", "[", "listaValores", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Encontrando", " ", "a", " ", "tor\[CCedilla]\[ATilde]o", " ", "que", " ",
+      "resultou", " ", "na", " ", "maior", " ", "valor", " ", "da", " ", 
+     "densidade"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"posicaoMaxima", "=", 
+     RowBox[{"Position", "[", 
+      RowBox[{"listaValores", ",", "resultadoMaximo"}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Extraindo", " ", "os", " ", "valores", " ", "de", " ", "m", " ", "e", 
+     " ", "p", " ", "correspondentes", " ", "a", " ", "maior", " ", 
+     "densidade"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mMaximo", ",", "pMaximo"}], "}"}], "=", 
+     RowBox[{"Extract", "[", 
+      RowBox[{"posicaoMaxima", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2"}], "}"}]}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Impress\[ATilde]o", " ", "dos", " ", "resultados"}], "*)"}], 
+   "\n", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<Os valores da tor\[CCedilla]\[ATilde]o com maior densidade \
+s\[ATilde]o {\>\"", "<>", 
+     RowBox[{"ToString", "[", "mMaximo", "]"}], "<>", "\"\<, \>\"", "<>", 
+     RowBox[{"ToString", "[", "pMaximo", "]"}], "<>", 
+     "\"\<}, a densidade m\[AAcute]xima encontrada foi \>\"", "<>", 
+     RowBox[{"ToString", "[", "resultadoMaximo", "]"}], "<>", "\"\<.\>\""}], 
+    "]"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9195936541154523`*^9, 3.9195937564907265`*^9}, {
+   3.919593792713129*^9, 3.9195939823531218`*^9}, {3.919594042298094*^9, 
+   3.9195940914385595`*^9}, {3.9195941313675613`*^9, 3.919594134202857*^9}, 
+   3.919594693573163*^9, {3.9195947613600616`*^9, 3.9195947647510047`*^9}, 
+   3.919595858924881*^9, {3.919596188558914*^9, 3.9195962035987372`*^9}, 
+   3.9195962380157347`*^9, {3.919596511829275*^9, 3.9195965554585323`*^9}, {
+   3.919596593969926*^9, 3.919596646506725*^9}, {3.9195967020356913`*^9, 
+   3.9195967250825634`*^9}, {3.919596774954996*^9, 3.91959690417879*^9}, {
+   3.9195977168615074`*^9, 3.9195977188224945`*^9}, {3.919598961355801*^9, 
+   3.9195989627499437`*^9}, {3.9195990773563066`*^9, 
+   3.9195990866276827`*^9}},ExpressionUUID->"4e43b379-ed88-4d2e-9c35-\
+843034a1d574"]
+},
+WindowSize->{756., 501.75},
+WindowMargins->{{18.75, Automatic}, {Automatic, 23.25}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ba4df050-6826-4284-a7a4-7c39ebe40d4d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1473, 41, 91, "Input",ExpressionUUID->"44593392-148a-4b95-bee2-73fdab75d245"],
+Cell[2034, 63, 727, 17, 62, "Input",ExpressionUUID->"1987576a-21b6-4c21-8967-b95a7797942d"],
+Cell[2764, 82, 931, 26, 48, "Input",ExpressionUUID->"8d58fadc-d25c-48d8-8e32-48d3ade20e3f"],
+Cell[3698, 110, 4118, 94, 504, "Input",ExpressionUUID->"4e43b379-ed88-4d2e-9c35-843034a1d574"]
+}
+]
+*)
+
